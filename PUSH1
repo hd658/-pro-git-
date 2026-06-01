@@ -1,0 +1,13 @@
+git push
+枚举对象中: 18, 完成.
+对象计数中: 100% (18/18), 完成.
+使用 16 个线程进行压缩
+压缩对象中: 100% (16/16), 完成.
+写入对象中: 100% (17/17), 3.10 KiB | 1.55 MiB/s, 完成.
+总共 17（差异 5），复用 0（差异 0），包复用 0
+remote: Resolving deltas: 100% (5/5), done.
+To github.com:hd658/-pro-git-.git
+   03b6209..1622d47  master -> master
+
+是的，我们成功push了，我们要提前fetch你要push的远程分支，然后用git checkout -b （同git switch -c）或者
+git switch -c （本地没有，将远程的拷贝一个备份到本地）或者git branch -u (本地已经有了) ,git clone也是设置跟踪的。
