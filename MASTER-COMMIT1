@@ -1,1 +1,15 @@
 "实验性文件：的确每次切换不同已经分叉的分支会出现工作目录改变的情况，接下来我们尝试一下git merge命令“
+
+"
+* ac632ba (HEAD -> master) 准备git merge,我们需要一个提交拉长master分支
+| * 0a2b5d1 (SECOND) "对SECOND-COMMIT1文件内容的补充"
+| * 2292593 "这是我为了实验一些命令的功能创建的文件: git branch SECOND git switch SECOND git add git commit "
+|/  
+*   03b6209 (pro-git/master) Merge github.com:hd658/-pro-git-
+|\  
+| * 788b84e (tag: v0.1, pro-git/main) Initial commit
+* f6c7b09 create README
+
+这是当前上一次提交的结果。
+
+"
