@@ -1,0 +1,44 @@
+"实验性文件：我们准备删除掉SECOND分支，因为已经合并了。然后准备提交到远程分支，应该会很顺利“
+
+”看看现在的文件有哪些，是否真的合并了:
+hd@hd-Legion-Y7000P-IRH8:~/git-practice/remote-repo$ ls -al
+总计 64
+drwxrwxr-x 3 hd hd  4096  6月  1 10:31 .
+drwxrwxr-x 4 hd hd  4096  5月 28 20:53 ..
+drwxrwxr-x 8 hd hd  4096  6月  1 10:31 .git
+-rw-rw-r-- 1 hd hd 35149  5月 29 14:10 LICENSE
+-rw-rw-r-- 1 hd hd   621  6月  1 10:29 MASTER-COMMIT1
+-rw-rw-r-- 1 hd hd   198  6月  1 10:32 MERGE-COMMIT1
+-rw-rw-r-- 1 hd hd    55  5月 28 21:09 README
+-rw-rw-r-- 1 hd hd    52  6月  1 10:30 SECOND-COMMIT1
+“
+
+在看看现在的git 历史：
+git log --decorate --graph --oneline --all
+*   bba3ff6 (HEAD -> master) Merge branch 'SECOND'
+|\  
+| * 0a2b5d1 (SECOND) "对SECOND-COMMIT1文件内容的补充"
+| * 2292593 "这是我为了实验一些命令的功能创建的文件: git branch SECOND git switch SECOND git add git commit "
+* | 8bcf315 看看现在的分支历史是长什么样子的
+* | ac632ba 准备git merge,我们需要一个提交拉长master分支
+|/  
+*   03b6209 (pro-git/master) Merge github.com:hd658/-pro-git-
+|\  
+| * 788b84e (tag: v0.1, pro-git/main) Initial commit
+* f6c7b09 create README
+
+
+
+删除掉SECOND分支指针：
+git log --decorate --graph --oneline --all
+*   bba3ff6 (HEAD -> master) Merge branch 'SECOND'
+|\  
+| * 0a2b5d1 "对SECOND-COMMIT1文件内容的补充"
+| * 2292593 "这是我为了实验一些命令的功能创建的文件: git branch SECOND git switch SECOND git add git commit "
+* | 8bcf315 看看现在的分支历史是长什么样子的
+* | ac632ba 准备git merge,我们需要一个提交拉长master分支
+|/  
+*   03b6209 (pro-git/master) Merge github.com:hd658/-pro-git-
+|\  
+| * 788b84e (tag: v0.1, pro-git/main) Initial commit
+* f6c7b09 create README
